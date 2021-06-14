@@ -32,7 +32,3 @@ $ (env) python app.py
 ```python
 if __name__ == "__main__":
     app.run(debug=True, port=<desired port>)
-
-[]: https://flasktaskmanagerwebapp.herokuapp.com/
-
-[Click here for the live version]: https://flasktaskmanagerwebapp.herokuapp.com/
