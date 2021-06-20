@@ -9,25 +9,34 @@ $ pip install virtualenv
 
 * Open a terminal in the project root directory and run:
 ```
-$ virtualenv env
+$ virtualenv venv
 ```
 
 * Then run the command:
 ```
-$ .\env\Scripts\activate
+$ source venv/bin/activate
 ```
 
 * Then install the dependencies:
 ```
-$ (env) pip install -r requirements.txt
+$ (venv) pip install -r requirements.txt
+```
+
+* Then setup the database:
+```
+$ (venv) python
+    
+    >>> from task_manager import db
+
+    >>> db.create_all()
 ```
 
 * Finally start the web server:
 ```
-$ (env) python app.py
+$ (venv) python run.py
 ```
 
-* This server will start on port 5000 by default. You can change this in `app.py` by changing the following line to this:
+* This server will start on port 5000 by default. You can change this in `run.py` by changing the following line to this:
 
 ```python
 if __name__ == "__main__":
